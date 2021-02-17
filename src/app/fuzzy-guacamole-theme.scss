@@ -4,7 +4,7 @@
 @include mat-core();
 
 $fuzzy-guacamole-primary: mat-palette($mat-indigo);
-$fuzzy-guacamole-accent: mat-palette($mat-pink, A200, A100, A400);
+$fuzzy-guacamole-accent: mat-palette($mat-blue, A200, A100, A400);
 $fuzzy-guacamole-theme: mat-light-theme(
   (
     color: (
