@@ -1,1 +1,1 @@
-"# fuzzy-guacamole" 
+# fuzzy-guacamole
