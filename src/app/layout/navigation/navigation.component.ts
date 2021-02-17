@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { NavigationService } from './services/navigation.service';
 
 @Component({
   selector: 'fuzzy-navigation',
@@ -6,13 +7,16 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./navigation.component.scss']
 })
 export class NavigationComponent implements OnInit {
-  @Input() drawerReference: any;
-
-  constructor() {
-    console.log(this.drawerReference);
+  constructor(private navigationService: NavigationService) {
   }
 
   ngOnInit(): void {
   }
 
+  /**
+   * open: toggles the side nav open.
+   */
+  public open() {
+    this.navigationService.open();
+  }
 }

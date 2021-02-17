@@ -10,6 +10,7 @@ import { AsideComponent } from './layout/aside/aside.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { MainComponent } from './layout/main/main.component';
 import { NavigationComponent } from './layout/navigation/navigation.component';
+import { NavigationService } from './layout/navigation/services/navigation.service';
 import { MessagesComponent } from './messages/messages.component';
 import { NotificationsComponent } from './notifications/notifications.component';
 import { ProfileComponent } from './profile/profile.component';
@@ -35,7 +36,9 @@ import { ProfileComponent } from './profile/profile.component';
     BrowserModule,
     BrowserAnimationsModule,
   ],
-  providers: [],
+  providers: [
+    NavigationService
+  ],
   bootstrap: [FuzzyGuacamoleComponent]
 })
 export class FuzzyGuacamoleModule { }

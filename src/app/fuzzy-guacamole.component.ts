@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatSidenav } from '@angular/material/sidenav';
+import { NavigationService } from './layout/navigation/services/navigation.service';
 
 @Component({
   selector: 'app-fuzzy-guacamole',
@@ -6,11 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./fuzzy-guacamole.component.scss']
 })
 export class FuzzyGuacamoleComponent implements OnInit {
-  showFiller = false;
+  @ViewChild('sidenav', { static: true }) public sidenav: MatSidenav;
 
-  constructor() { }
+  constructor(private navigationService: NavigationService) { }
 
   ngOnInit(): void {
+    this.navigationService.setSidenav(this.sidenav);
   }
-
 }

@@ -1,10 +1,10 @@
 <nav>
   <ul>
-    <li [routerLink]="'/'">Home</li>
-    <li [routerLink]="'/explore'">Explore</li>
-    <li [routerLink]="'/notifications'">Notifications</li>
-    <li [routerLink]="'/messages'">Messages</li>
-    <li [routerLink]="'/bookmarks'">Bookmarks</li>
-    <li [routerLink]="'/profile'">Profile</li>
+    <li (click)="open()" [routerLink]="'/'">Home</li>
+    <li (click)="open()" [routerLink]="'/explore'">Explore</li>
+    <li (click)="open()" [routerLink]="'/notifications'">Notifications</li>
+    <li (click)="open()" [routerLink]="'/messages'">Messages</li>
+    <li (click)="open()" [routerLink]="'/bookmarks'">Bookmarks</li>
+    <li (click)="open()" [routerLink]="'/profile'">Profile</li>
   </ul>
 </nav>
