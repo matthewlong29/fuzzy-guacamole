@@ -11,6 +11,7 @@ import { BookmarksComponent } from './bookmarks/bookmarks.component';
 import { ExploreComponent } from './explore/explore.component';
 import { MessagesComponent } from './messages/messages.component';
 import { NotificationsComponent } from './notifications/notifications.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { NotificationsComponent } from './notifications/notifications.component'
   ],
   imports: [
     BrowserModule,
-    FuzzyGuacamoleRoutingModule
+    FuzzyGuacamoleRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [FuzzyGuacamoleComponent]
