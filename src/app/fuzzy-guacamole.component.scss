@@ -1,18 +1,10 @@
 @import "./fuzzy-guacamole-theme.scss";
 
-.example-container {
-  width: 500px;
-  height: 300px;
-  border: 1px solid rgba(0, 0, 0, 0.5);
+header {
+  min-height: $header-height;
+  max-height: $header-height;
 }
 
-.example-sidenav-content {
-  display: flex;
-  height: 100%;
-  align-items: center;
-  justify-content: center;
-}
-
-.example-sidenav {
-  padding: 20px;
+.fuzzy-guacamole-main {
+  height: calc(100vh - #{$header-height});
 }

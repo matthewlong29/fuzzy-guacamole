@@ -1,10 +1,10 @@
 <header>
   <fuzzy-header>
-    <fuzzy-navigation></fuzzy-navigation>
+    <fuzzy-navigation [drawerReference]="drawer"></fuzzy-navigation>
   </fuzzy-header>
 </header>
 
-<mat-drawer-container class="example-container" autosize>
+<mat-drawer-container class="fuzzy-guacamole-main" autosize>
   <mat-drawer #drawer class="example-sidenav" mode="over" position="end">
     <aside>
       <fuzzy-aside>
@@ -13,7 +13,7 @@
     </aside>
   </mat-drawer>
 
-  <main class="example-sidenav-content">
+  <main>
     <button type="button" mat-button (click)="drawer.toggle()" color="accent">
       Toggle sidenav
     </button>
