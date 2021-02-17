@@ -1,14 +1,42 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+@import "~@angular/material/theming";
+
+@include mat-core();
+
+$fuzzy-guacamole-primary: mat-palette($mat-indigo);
+$fuzzy-guacamole-accent: mat-palette($mat-pink, A200, A100, A400);
+$fuzzy-guacamole-theme: mat-light-theme(
+  (
+    color: (
+      primary: $fuzzy-guacamole-primary,
+      accent: $fuzzy-guacamole-accent,
+    ),
+  )
+);
+
+@include angular-material-theme($fuzzy-guacamole-theme);
+
+$fuzzy-guacamole-dark-primary: mat-palette($mat-blue-grey);
+$fuzzy-guacamole-dark-accent: mat-palette($mat-amber, A200, A100, A400);
+$fuzzy-guacamole-dark-warn: mat-palette($mat-deep-orange);
+$fuzzy-guacamole-dark-theme: mat-dark-theme(
+  (
+    color: (
+      primary: $fuzzy-guacamole-dark-primary,
+      accent: $fuzzy-guacamole-dark-accent,
+      warn: $fuzzy-guacamole-dark-warn,
+    ),
+  )
+);
+
+.fuzzy-guacamole-dark-theme {
+  @include angular-material-color($fuzzy-guacamole-dark-theme);
+}
 
 $primary: #00293c;
 $secondary: #1e656d;
 $accent: #f62a00;
 $text: #f1f3c3;
-
-@font-face {
-  font-family: 'caveat brush';
-  src: url('../assets/fonts/CaveatBrush-Regular.ttf') format('truetype');
-};
 
 body {
   margin: 0;
@@ -29,18 +57,7 @@ a:active,
 ul,
 li,
 span {
-  color: $text;
-  font-family: 'caveat brush', 'Open Sans', sans-serif;
-}
-
-p,
-a,
-a:visited,
-a:active,
-ul,
-li,
-span {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 table,

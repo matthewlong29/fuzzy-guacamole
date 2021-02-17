@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./fuzzy-guacamole.component.scss']
 })
 export class FuzzyGuacamoleComponent implements OnInit {
+  showFiller = false;
 
   constructor() { }
 

@@ -4,11 +4,21 @@
   </fuzzy-header>
 </header>
 
-<main>
-  <fuzzy-main></fuzzy-main>
-</main>
-<aside>
-  <fuzzy-aside>
-    <router-outlet></router-outlet>
-  </fuzzy-aside>
-</aside>
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="over" position="end">
+    <aside>
+      <fuzzy-aside>
+        <router-outlet></router-outlet>
+      </fuzzy-aside>
+    </aside>
+  </mat-drawer>
+
+  <main class="example-sidenav-content">
+    <button type="button" mat-button (click)="drawer.toggle()">
+      Toggle sidenav
+    </button>
+
+    <fuzzy-main></fuzzy-main>
+  </main>
+
+</mat-drawer-container>
