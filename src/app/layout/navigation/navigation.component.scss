@@ -1,7 +1,7 @@
 @import "../../fuzzy-guacamole-theme.scss";
 
 div {
-  height: calc(100% - (#{$header-height} / 2) - 16px - 16px);
+  height: calc(100% - (#{$header-height} / 2) - 16px - 16px - 4px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
