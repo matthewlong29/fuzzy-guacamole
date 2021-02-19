@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { NavigationService } from 'src/app/layout/navigation/services/navigation.service';
 
 @Component({
   selector: 'fuzzy-guacamole-page-banner',
@@ -8,8 +9,15 @@ import { Component, Input, OnInit } from '@angular/core';
 export class PageBannerComponent implements OnInit {
   @Input() title: string;
 
-  constructor() { }
+  constructor(private navigationService: NavigationService) { }
 
   ngOnInit(): void {
+  }
+
+  /**
+   * close: close the opened page.
+   */
+  public close(): void {
+    this.navigationService.close();
   }
 }

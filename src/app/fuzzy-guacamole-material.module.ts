@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatRippleModule } from '@angular/material/core';
+import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
 
 @NgModule({
@@ -8,13 +9,15 @@ import { MatSidenavModule } from '@angular/material/sidenav';
   imports: [
     MatSidenavModule,
     MatButtonModule,
-    MatRippleModule
+    MatRippleModule,
+    MatIconModule
   ],
   providers: [],
   exports: [
     MatSidenavModule,
     MatButtonModule,
-    MatRippleModule
+    MatRippleModule,
+    MatIconModule
   ]
 })
 export class FuzzyGuacamoleMaterialModule { }

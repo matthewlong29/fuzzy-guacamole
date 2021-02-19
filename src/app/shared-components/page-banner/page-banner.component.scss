@@ -5,11 +5,16 @@ div {
   border-radius: 16px 0 0px 0px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   background-color: $primary;
   color: $text;
 
   h1 {
     margin: 0;
     padding: 2rem;
+  }
+
+  button {
+    margin: 1rem;
   }
 }
