@@ -9,12 +9,13 @@ import { HeaderComponent } from './layout/header/header.component';
 import { MainComponent } from './layout/main/main.component';
 import { NavigationComponent } from './layout/navigation/navigation.component';
 import { NavigationService } from './layout/navigation/services/navigation.service';
-import { BookmarksComponent } from './pages/bookmarks/bookmarks.component';
 import { ExploreComponent } from './pages/explore/explore.component';
+import { FavoritesComponent } from './pages/favorites/favorites.component';
 import { MessagesComponent } from './pages/messages/messages.component';
 import { NotificationsComponent } from './pages/notifications/notifications.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { PageBannerComponent } from './shared-components/page-banner/page-banner.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -24,11 +25,12 @@ import { PageBannerComponent } from './shared-components/page-banner/page-banner
     AsideComponent,
     FuzzyGuacamoleComponent,
     ProfileComponent,
-    BookmarksComponent,
+    FavoritesComponent,
     ExploreComponent,
     MessagesComponent,
     NotificationsComponent,
-    PageBannerComponent
+    PageBannerComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { BookmarksComponent } from './pages/bookmarks/bookmarks.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { ExploreComponent } from './pages/explore/explore.component';
+import { FavoritesComponent } from './pages/favorites/favorites.component';
 import { MessagesComponent } from './pages/messages/messages.component';
 import { NotificationsComponent } from './pages/notifications/notifications.component';
 import { ProfileComponent } from './pages/profile/profile.component';
@@ -20,12 +21,16 @@ const routes: Routes = [
     component: MessagesComponent
   },
   {
-    path: 'bookmarks',
-    component: BookmarksComponent
+    path: 'favorites',
+    component: FavoritesComponent
   },
   {
     path: 'profile',
     component: ProfileComponent
+  },
+  {
+    path: 'dashboard',
+    component: DashboardComponent
   },
   {
     path: '',
