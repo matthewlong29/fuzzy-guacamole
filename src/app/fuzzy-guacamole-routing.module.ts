@@ -6,6 +6,7 @@ import { FavoritesComponent } from './pages/favorites/favorites.component';
 import { MessagesComponent } from './pages/messages/messages.component';
 import { NotificationsComponent } from './pages/notifications/notifications.component';
 import { ProfileComponent } from './pages/profile/profile.component';
+import { AddRecipeFormComponent } from './recipes/components/add-recipe-form/add-recipe-form.component';
 
 const routes: Routes = [
   {
@@ -31,6 +32,10 @@ const routes: Routes = [
   {
     path: 'dashboard',
     component: DashboardComponent
+  },
+  {
+    path: 'add-new',
+    component: AddRecipeFormComponent
   },
   {
     path: '',

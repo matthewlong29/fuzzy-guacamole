@@ -9,41 +9,46 @@ import { CreateRecipeService } from '../../services/create-recipe.service';
   styleUrls: ['./add-recipe-form.component.scss']
 })
 export class AddRecipeFormComponent implements OnInit {
-  public recipeForm: FormGroup;
+  public recipeNameForm: FormGroup;
+  public recipeIngredientsForm: FormGroup;
+  public recipe: Recipe;
 
   constructor(private createRecipeService: CreateRecipeService) {
-
+    this.recipe = new Recipe();
   }
 
   ngOnInit(): void {
-    this.recipeForm = new FormGroup({
+    this.recipeNameForm = new FormGroup({
       nameControl: new FormControl('', [Validators.required, Validators.pattern("^[a-zA-Z]*$")]),
       descriptionControl: new FormControl('', [Validators.required, Validators.pattern("^[a-zA-Z]*$")]),
-      numberOfIngredientsControl: new FormControl('', [Validators.required, Validators.pattern("^[0-9]*$")]),
-      instructionsControl: new FormControl('', Validators.required),
-      timeToPrepControl: new FormControl('', [Validators.required, Validators.pattern("^[0-9]*$")]),
-      timeToCookControl: new FormControl('', [Validators.required, Validators.pattern("^[0-9]*$")]),
-      numberOfLikesControl: new FormControl('', [Validators.required, Validators.pattern("^[0-9]*$")]),
-      numberOfCommentsControl: new FormControl('', [Validators.required, Validators.pattern("^[0-9]*$")]),
+    });
+
+    this.recipeIngredientsForm = new FormGroup({
+      numberNeededControl: new FormControl('', [Validators.required, Validators.pattern("^[0-9]*$")]),
+      ingredientControl: new FormControl('', Validators.required),
     });
   }
 
-    /**
-   * create: create a new recipe.
+  /**
+   * submitNameAndDescription: adds a name and description to the new recipe.
    */
-  public create() {
-    const recipe = new Recipe();
-    recipe.name = this.recipeForm.get("nameControl").value;
-    recipe.description = this.recipeForm.get("descriptionControl").value;
-    recipe.creationDate = new Date(Date.now());
-    recipe.numberOfIngredients = this.recipeForm.get("numberOfIngredientsControl").value;
-    recipe.instructions = this.recipeForm.get("instructionsControl").value;
-    recipe.timeToPrep = this.recipeForm.get("timeToPrepControl").value;
-    recipe.timeToCook = this.recipeForm.get("timeToCookControl").value;
-    recipe.numberOfLikes = this.recipeForm.get("numberOfLikesControl").value;
-    recipe.numberOfComments = this.recipeForm.get("numberOfCommentsControl").value;
-    recipe.categories = ['chicken', 'chinese',];
-    this.createRecipeService.createRecipe(recipe);
+  public submitNameAndDescription() {
+    this.recipe.name = this.recipeNameForm.get("nameControl").value;
+    this.recipe.description = this.recipeNameForm.get("descriptionControl").value;
   }
 
+  /**
+   * addIngredient: adds a new ingredient to the recipe.
+   */
+  public addIngredient() {
+    this.recipe.name = this.recipeIngredientsForm.get("nameControl").value;
+    this.recipe.description = this.recipeIngredientsForm.get("descriptionControl").value;
+  }
+
+ /**
+  * publishRecipe: publishes the recipe to firebase.
+  */
+  public publishRecipe() {
+    this.createRecipeService.createRecipe(this.recipe);
+  }
 }

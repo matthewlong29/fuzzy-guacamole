@@ -14,5 +14,6 @@ export class FuzzyGuacamoleComponent implements OnInit {
 
   ngOnInit(): void {
     this.navigationService.setSidenav(this.sidenav);
+    this.navigationService.open(); // auto open
   }
 }

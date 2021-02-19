@@ -1,13 +1,13 @@
 @import "../../../fuzzy-guacamole-theme.scss";
 
 div {
-  margin: -3rem;
   border-radius: 16px 0 0px 0px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: $primary-color;
   color: $text-color;
+  box-shadow: 0px -4px 4px 4px $text-color;
 
   h1 {
     margin: 0;
