@@ -8,6 +8,8 @@ div {
   background-color: $primary-color;
 
   nav {
+    user-select: none;
+
     ul {
       padding: 0;
       margin: 0;
