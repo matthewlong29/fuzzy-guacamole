@@ -1,0 +1,23 @@
+@import "../../fuzzy-guacamole-theme.scss";
+
+nav {
+  ul {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    li {
+      padding: 1rem;
+      cursor: pointer;
+      list-style: none;
+      color: $text;
+      width: 100%;
+      text-align: center;
+      outline: none;
+      &:hover {
+        background-color: lighten($color: $primary, $amount: 10);
+      }
+    }
+  }
+}
