@@ -2,12 +2,14 @@
 
 div {
   height: calc(#{$header-height} / 2);
-  margin: 1rem;
+  padding: 1rem;
   display: flex;
   justify-content: center;
   align-content: center;
+  background-color: $primary-color;
+
   h1 {
-    color: $text;
+    color: $text-color;
     margin: 0;
     text-align: center;
   }

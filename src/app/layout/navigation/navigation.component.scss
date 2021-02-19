@@ -5,25 +5,27 @@ div {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background-color: $primary-color;
 
   nav {
     ul {
       padding: 0;
+      margin: 0;
       display: flex;
       flex-direction: column;
       align-items: center;
 
       li {
-        padding: 1rem;
+        padding: 1rem 0;
         cursor: pointer;
         list-style: none;
-        color: $text;
+        color: $text-color;
         width: 100%;
         text-align: center;
         outline: none;
 
         &:hover {
-          background-color: lighten($color: $primary, $amount: 10);
+          background-color: lighten($color: $primary-color, $amount: 10);
         }
       }
     }

@@ -6,7 +6,7 @@ import { FuzzyGuacamoleRoutingModule } from './fuzzy-guacamole-routing.module';
 import { FuzzyGuacamoleComponent } from './fuzzy-guacamole.component';
 import { AsideComponent } from './layout/aside/aside.component';
 import { HeaderComponent } from './layout/header/header.component';
-import { MainComponent } from './layout/main/main.component';
+import { MainComponent } from './main/main.component';
 import { NavigationComponent } from './layout/navigation/navigation.component';
 import { NavigationService } from './layout/navigation/services/navigation.service';
 import { ExploreComponent } from './pages/explore/explore.component';

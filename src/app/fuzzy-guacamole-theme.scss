@@ -1,49 +1,90 @@
-@import '@angular/material/prebuilt-themes/indigo-pink.css';
+@import "@angular/material/prebuilt-themes/indigo-pink.css";
 @import "~@angular/material/theming";
 
 @include mat-core();
 
-$fuzzy-guacamole-primary: mat-palette($mat-indigo);
-$fuzzy-guacamole-accent: mat-palette($mat-blue, A200, A100, A400);
+/*********************************************************************************************************
+light theme
+*********************************************************************************************************/
+
+$fuzzy-guacamole-primary: mat-palette($mat-light-green, A200, A100, A400);
+$fuzzy-guacamole-accent: mat-palette($mat-brown, 300, 400, 500);
+$fuzzy-guacamole-warn: mat-palette($mat-red, 400);
+$fuzzy-guacamole-text: mat-palette($mat-brown, 900);
+$fuzzy-guacamole-background: mat-palette($mat-light-green, 50);
+$fuzzy-guacamole-container: mat-palette($mat-deep-orange);
+
 $fuzzy-guacamole-theme: mat-light-theme(
   (
     color: (
       primary: $fuzzy-guacamole-primary,
       accent: $fuzzy-guacamole-accent,
+      warn: $fuzzy-guacamole-warn,
+      text: $fuzzy-guacamole-text,
+      background: $fuzzy-guacamole-background,
+      container: $fuzzy-guacamole-container,
     ),
   )
 );
 
 @include angular-material-theme($fuzzy-guacamole-theme);
 
+$primary-color: mat-color($fuzzy-guacamole-primary);
+$accent-color: mat-color($fuzzy-guacamole-accent);
+$warn-color: mat-color($fuzzy-guacamole-warn);
+$text-color: mat-color($fuzzy-guacamole-text);
+$background-color: mat-color($fuzzy-guacamole-background);
+$container-color: mat-color($fuzzy-guacamole-container);
+
+/*********************************************************************************************************
+dark theme
+*********************************************************************************************************/
+
 $fuzzy-guacamole-dark-primary: mat-palette($mat-blue-grey);
 $fuzzy-guacamole-dark-accent: mat-palette($mat-amber, A200, A100, A400);
 $fuzzy-guacamole-dark-warn: mat-palette($mat-deep-orange);
+$fuzzy-guacamole-dark-text: mat-palette($mat-deep-orange);
+$fuzzy-guacamole-dark-background: mat-palette($mat-deep-orange);
+$fuzzy-guacamole-dark-container: mat-palette($mat-deep-orange);
+
 $fuzzy-guacamole-dark-theme: mat-dark-theme(
   (
     color: (
       primary: $fuzzy-guacamole-dark-primary,
       accent: $fuzzy-guacamole-dark-accent,
       warn: $fuzzy-guacamole-dark-warn,
+      text: $fuzzy-guacamole-dark-text,
+      background: $fuzzy-guacamole-dark-background,
+      container: $fuzzy-guacamole-dark-container,
     ),
   )
 );
 
 .fuzzy-guacamole-dark-theme {
   @include angular-material-color($fuzzy-guacamole-dark-theme);
+
+  $primary-color: mat-color($fuzzy-guacamole-dark-primary);
+  $accent-color: mat-color($fuzzy-guacamole-dark-accent);
+  $warn-color: mat-color($fuzzy-guacamole-dark-warn);
+  $text-color: mat-color($fuzzy-guacamole-dark-text);
+  $background-color: mat-color($fuzzy-guacamole-dark-background);
+  $container-color: mat-color($fuzzy-guacamole-dark-container);
 }
 
-$primary: #00293c;
-$secondary: #1e656d;
-$accent: #f62a00;
-$text: #f1f3c3;
+/*********************************************************************************************************
+theme variables
+*********************************************************************************************************/
 
 $header-height: 150px;
+
+/*********************************************************************************************************
+global styles
+*********************************************************************************************************/
 
 body {
   margin: 0;
   padding: 0;
-  background-color: $primary;
+  background-color: $background-color;
 }
 
 h1,
@@ -67,9 +108,9 @@ thead,
 th,
 tr,
 td {
-  color: $text;
+  color: $text-color;
 }
 
 label {
-  color: $text;
+  color: $text-color;
 }
