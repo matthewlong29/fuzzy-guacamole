@@ -1,20 +1,22 @@
-<header>
-  <fuzzy-header>
-    <fuzzy-navigation></fuzzy-navigation>
-  </fuzzy-header>
-</header>
+<section>
+  <header>
+    <fuzzy-header>
+      <fuzzy-navigation></fuzzy-navigation>
+    </fuzzy-header>
+  </header>
 
-<mat-sidenav-container class="fuzzy-guacamole-main" autosize>
-  <mat-sidenav #sidenav mode="over" position="end">
-    <aside>
-      <fuzzy-aside>
-        <router-outlet></router-outlet>
-      </fuzzy-aside>
-    </aside>
-  </mat-sidenav>
+  <mat-sidenav-container class="fuzzy-guacamole-main" autosize>
+    <mat-sidenav #sidenav mode="over" position="end">
+      <aside>
+        <fuzzy-aside>
+          <router-outlet></router-outlet>
+        </fuzzy-aside>
+      </aside>
+    </mat-sidenav>
 
-  <main>
-    <fuzzy-main></fuzzy-main>
-  </main>
+    <main>
+      <fuzzy-main></fuzzy-main>
+    </main>
 
-</mat-sidenav-container>
+  </mat-sidenav-container>
+</section>
