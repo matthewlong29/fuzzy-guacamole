@@ -19,4 +19,11 @@ export class NavigationComponent implements OnInit {
   public open() {
     this.navigationService.open();
   }
+
+  /**
+   * close: toggles the side nav close.
+   */
+  public close() {
+    this.navigationService.close();
+  }
 }
