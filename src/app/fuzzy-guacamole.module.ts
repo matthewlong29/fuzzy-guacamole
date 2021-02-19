@@ -6,16 +6,20 @@ import { FuzzyGuacamoleRoutingModule } from './fuzzy-guacamole-routing.module';
 import { FuzzyGuacamoleComponent } from './fuzzy-guacamole.component';
 import { AsideComponent } from './layout/aside/aside.component';
 import { HeaderComponent } from './layout/header/header.component';
-import { MainComponent } from './main/main.component';
 import { NavigationComponent } from './layout/navigation/navigation.component';
 import { NavigationService } from './layout/navigation/services/navigation.service';
+import { MainComponent } from './main/main.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { ExploreComponent } from './pages/explore/explore.component';
 import { FavoritesComponent } from './pages/favorites/favorites.component';
 import { MessagesComponent } from './pages/messages/messages.component';
 import { NotificationsComponent } from './pages/notifications/notifications.component';
 import { ProfileComponent } from './pages/profile/profile.component';
+import { CreateRecipeService } from './recipes/services/create-recipe.service';
+import { DeleteRecipeService } from './recipes/services/delete-recipe.service';
+import { ReadRecipeService } from './recipes/services/read-recipe.service';
+import { UpdateRecipeService } from './recipes/services/update-recipe.service';
 import { PageBannerComponent } from './shared-components/page-banner/page-banner.component';
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +45,11 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
     BrowserAnimationsModule,
   ],
   providers: [
-    NavigationService
+    NavigationService,
+    CreateRecipeService,
+    ReadRecipeService,
+    UpdateRecipeService,
+    DeleteRecipeService,
   ],
   bootstrap: [FuzzyGuacamoleComponent]
 })
