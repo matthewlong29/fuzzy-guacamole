@@ -5,6 +5,8 @@ section {
 
   header {
     min-width: $header-height;
+    box-shadow: -4px 0px 4px 4px $text-color;
+    margin-right: 4px;
   }
 
   .fuzzy-guacamole-main {
