@@ -1,0 +1,36 @@
+<form [formGroup]="recipeForm" (ngSubmit)="create()">
+  <div>
+    <label for="name">Name:</label>
+    <input formControlName="nameControl" name="name">
+  </div>
+  <div>
+    <label for="description">Description:</label>
+    <input formControlName="descriptionControl" name="description">
+  </div>
+  <div>
+    <label for="numberOfIngredients">Number Of Ingredients:</label>
+    <input formControlName="numberOfIngredientsControl" name="numberOfIngredients">
+  </div>
+  <div>
+    <label for="instructions">Instructions:</label>
+    <input formControlName="instructionsControl" name="instructions">
+  </div>
+  <div>
+    <label for="timeToPrep">Time To Prep:</label>
+    <input formControlName="timeToPrepControl" name="timeToPrep">
+  </div>
+  <div>
+    <label for="timeToCook">Time To Cook:</label>
+    <input formControlName="timeToCookControl" name="timeToCook">
+  </div>
+  <div>
+    <label for="numberOfLikes">Number Of Likes:</label>
+    <input formControlName="numberOfLikesControl" name="numberOfLikes">
+  </div>
+  <div>
+    <label for="numberOfComments">Number Of Comments:</label>
+    <input formControlName="numberOfCommentsControl" name="numberOfComments">
+  </div>
+
+  <input type="submit" value="Submit" [disabled]="recipeForm.invalid">
+</form>

@@ -24,6 +24,7 @@ import { DeleteRecipeService } from './recipes/services/delete-recipe.service';
 import { ReadRecipeService } from './recipes/services/read-recipe.service';
 import { UpdateRecipeService } from './recipes/services/update-recipe.service';
 import { PageBannerComponent } from './shared-components/page-banner/page-banner.component';
+import { AddRecipeFormComponent } from './recipes/components/add-recipe-form/add-recipe-form.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { PageBannerComponent } from './shared-components/page-banner/page-banner
     NotificationsComponent,
     PageBannerComponent,
     DashboardComponent,
-    RecipeTileComponent
+    RecipeTileComponent,
+    AddRecipeFormComponent
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebaseConfig),

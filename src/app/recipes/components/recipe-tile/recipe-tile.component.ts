@@ -13,23 +13,11 @@ import { UpdateRecipeService } from '../../services/update-recipe.service';
 })
 export class RecipeTileComponent implements OnInit {
   public recipes: Array<Recipe>;
-  public recipeForm: FormGroup;
 
-  constructor(private createRecipeService: CreateRecipeService, private readRecipeService: ReadRecipeService, private updateRecipeService: UpdateRecipeService, private deleteRecipeService: DeleteRecipeService) {
+  constructor(private readRecipeService: ReadRecipeService, private updateRecipeService: UpdateRecipeService, private deleteRecipeService: DeleteRecipeService) {
   }
 
   ngOnInit(): void {
-    this.recipeForm = new FormGroup({
-      nameControl: new FormControl('', [Validators.required, Validators.pattern("^[a-zA-Z]*$")]),
-      descriptionControl: new FormControl('', [Validators.required, Validators.pattern("^[a-zA-Z]*$")]),
-      numberOfIngredientsControl: new FormControl('', [Validators.required, Validators.pattern("^[0-9]*$")]),
-      instructionsControl: new FormControl('', Validators.required),
-      timeToPrepControl: new FormControl('', [Validators.required, Validators.pattern("^[0-9]*$")]),
-      timeToCookControl: new FormControl('', [Validators.required, Validators.pattern("^[0-9]*$")]),
-      numberOfLikesControl: new FormControl('', [Validators.required, Validators.pattern("^[0-9]*$")]),
-      numberOfCommentsControl: new FormControl('', [Validators.required, Validators.pattern("^[0-9]*$")]),
-    });
-
     this.readRecipeService.getRecipes().subscribe(data => {
       this.recipes = data.map(e => {
         return {
@@ -38,24 +26,6 @@ export class RecipeTileComponent implements OnInit {
         } as Recipe;
       });
     });
-  }
-
-  /**
-   * create: create a new recipe.
-   */
-  public create() {
-    const recipe = new Recipe();
-    recipe.name = this.recipeForm.get("nameControl").value;
-    recipe.description = this.recipeForm.get("descriptionControl").value;
-    recipe.creationDate = new Date(Date.now());
-    recipe.numberOfIngredients = this.recipeForm.get("numberOfIngredientsControl").value;
-    recipe.instructions = this.recipeForm.get("instructionsControl").value;
-    recipe.timeToPrep = this.recipeForm.get("timeToPrepControl").value;
-    recipe.timeToCook = this.recipeForm.get("timeToCookControl").value;
-    recipe.numberOfLikes = this.recipeForm.get("numberOfLikesControl").value;
-    recipe.numberOfComments = this.recipeForm.get("numberOfCommentsControl").value;
-    recipe.categories = ['chicken', 'chinese',];
-    this.createRecipeService.createRecipe(recipe);
   }
 
   /**
