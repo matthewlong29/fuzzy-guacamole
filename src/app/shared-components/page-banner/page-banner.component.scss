@@ -1,0 +1,15 @@
+@import "../../fuzzy-guacamole-theme.scss";
+
+div {
+  margin: -3rem;
+  border-radius: 16px 0 0px 0px;
+  display: flex;
+  align-items: center;
+  background-color: $primary;
+  color: $text;
+
+  h1 {
+    margin: 0;
+    padding: 2rem;
+  }
+}

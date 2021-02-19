@@ -1,22 +1,29 @@
 @import "../../fuzzy-guacamole-theme.scss";
 
-nav {
-  ul {
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+div {
+  height: calc(100% - #{$header-height} / 2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
-    li {
-      padding: 1rem;
-      cursor: pointer;
-      list-style: none;
-      color: $text;
-      width: 100%;
-      text-align: center;
-      outline: none;
-      &:hover {
-        background-color: lighten($color: $primary, $amount: 10);
+  nav {
+    ul {
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      li {
+        padding: 1rem;
+        cursor: pointer;
+        list-style: none;
+        color: $text;
+        width: 100%;
+        text-align: center;
+        outline: none;
+        &:hover {
+          background-color: lighten($color: $primary, $amount: 10);
+        }
       }
     }
   }

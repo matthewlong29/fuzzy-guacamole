@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { BookmarksComponent } from './bookmarks/bookmarks.component';
-import { ExploreComponent } from './explore/explore.component';
 import { FuzzyGuacamoleMaterialModule } from './fuzzy-guacamole-material.module';
 import { FuzzyGuacamoleRoutingModule } from './fuzzy-guacamole-routing.module';
 import { FuzzyGuacamoleComponent } from './fuzzy-guacamole.component';
@@ -11,9 +9,12 @@ import { HeaderComponent } from './layout/header/header.component';
 import { MainComponent } from './layout/main/main.component';
 import { NavigationComponent } from './layout/navigation/navigation.component';
 import { NavigationService } from './layout/navigation/services/navigation.service';
-import { MessagesComponent } from './messages/messages.component';
-import { NotificationsComponent } from './notifications/notifications.component';
-import { ProfileComponent } from './profile/profile.component';
+import { BookmarksComponent } from './pages/bookmarks/bookmarks.component';
+import { ExploreComponent } from './pages/explore/explore.component';
+import { MessagesComponent } from './pages/messages/messages.component';
+import { NotificationsComponent } from './pages/notifications/notifications.component';
+import { ProfileComponent } from './pages/profile/profile.component';
+import { PageBannerComponent } from './shared-components/page-banner/page-banner.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ProfileComponent } from './profile/profile.component';
     BookmarksComponent,
     ExploreComponent,
     MessagesComponent,
-    NotificationsComponent
+    NotificationsComponent,
+    PageBannerComponent
   ],
   imports: [
     BrowserModule,

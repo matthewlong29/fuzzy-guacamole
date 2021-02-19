@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { BookmarksComponent } from './bookmarks/bookmarks.component';
-import { ExploreComponent } from './explore/explore.component';
-import { MessagesComponent } from './messages/messages.component';
-import { NotificationsComponent } from './notifications/notifications.component';
-import { ProfileComponent } from './profile/profile.component';
+import { BookmarksComponent } from './pages/bookmarks/bookmarks.component';
+import { ExploreComponent } from './pages/explore/explore.component';
+import { MessagesComponent } from './pages/messages/messages.component';
+import { NotificationsComponent } from './pages/notifications/notifications.component';
+import { ProfileComponent } from './pages/profile/profile.component';
 
 const routes: Routes = [
   {

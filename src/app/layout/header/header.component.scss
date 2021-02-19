@@ -1,7 +1,14 @@
 @import "../../fuzzy-guacamole-theme.scss";
 
-h1 {
-  padding: 1rem;
-  color: $text;
-  text-align: center;
+div {
+  height: calc(#{$header-height} / 2);
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  h1 {
+    color: $text;
+    margin: 0;
+    text-align: center;
+  }
 }

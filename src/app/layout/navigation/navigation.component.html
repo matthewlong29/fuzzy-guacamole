@@ -1,10 +1,16 @@
-<nav>
-  <ul>
-    <li (click)="close()" [routerLink]="'/'">Home Feed</li>
-    <li (click)="open()" [routerLink]="'/explore'">Explore</li>
-    <li (click)="open()" [routerLink]="'/notifications'">Notifications</li>
-    <li (click)="open()" [routerLink]="'/messages'">Messages</li>
-    <li (click)="open()" [routerLink]="'/bookmarks'">Bookmarks</li>
-    <li (click)="open()" [routerLink]="'/profile'">Profile</li>
-  </ul>
-</nav>
+<div>
+  <nav>
+    <ul>
+      <li matRipple (click)="close()" [routerLink]="'/'">Home Feed</li>
+      <li matRipple (click)="open()" [routerLink]="'/explore'">Explore</li>
+      <li matRipple (click)="open()" [routerLink]="'/favorites'">Favorites</li>
+    </ul>
+  </nav>
+
+  <nav>
+    <ul>
+      <li matRipple (click)="open()" [routerLink]="'/notifications'">Notifications</li>
+      <li matRipple (click)="open()" [routerLink]="'/dashboard'">Dashboard</li>
+    </ul>
+  </nav>
+</div>

@@ -1,17 +1,20 @@
 import { NgModule } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
+import { MatRippleModule } from '@angular/material/core';
 import { MatSidenavModule } from '@angular/material/sidenav';
 
 @NgModule({
   declarations: [],
   imports: [
     MatSidenavModule,
-    MatButtonModule
+    MatButtonModule,
+    MatRippleModule
   ],
   providers: [],
   exports: [
     MatSidenavModule,
-    MatButtonModule
+    MatButtonModule,
+    MatRippleModule
   ]
 })
 export class FuzzyGuacamoleMaterialModule { }
