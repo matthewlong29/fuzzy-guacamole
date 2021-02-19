@@ -52,7 +52,7 @@ export class RecipeTileComponent implements OnInit {
     recipe.timeToCook = this.recipeForm.get("timeToCookControl").value;
     recipe.numberOfLikes = this.recipeForm.get("numberOfLikesControl").value;
     recipe.numberOfComments = this.recipeForm.get("numberOfCommentsControl").value;
-
+    recipe.categories = ['chicken', 'chinese', ]
     this.recipeService.createRecipe(recipe);
   }
 
