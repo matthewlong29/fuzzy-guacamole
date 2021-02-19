@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FuzzyGuacamoleMaterialModule } from './fuzzy-guacamole-material.module';
@@ -15,9 +16,11 @@ import { FavoritesComponent } from './pages/favorites/favorites.component';
 import { MessagesComponent } from './pages/messages/messages.component';
 import { NotificationsComponent } from './pages/notifications/notifications.component';
 import { ProfileComponent } from './pages/profile/profile.component';
+import { RecipeTileComponent } from './recipes/components/recipe-tile/recipe-tile.component';
 import { CreateRecipeService } from './recipes/services/create-recipe.service';
 import { DeleteRecipeService } from './recipes/services/delete-recipe.service';
 import { ReadRecipeService } from './recipes/services/read-recipe.service';
+import { RecipeService } from './recipes/services/recipe.service';
 import { UpdateRecipeService } from './recipes/services/update-recipe.service';
 import { PageBannerComponent } from './shared-components/page-banner/page-banner.component';
 
@@ -34,7 +37,8 @@ import { PageBannerComponent } from './shared-components/page-banner/page-banner
     MessagesComponent,
     NotificationsComponent,
     PageBannerComponent,
-    DashboardComponent
+    DashboardComponent,
+    RecipeTileComponent
   ],
   imports: [
     BrowserModule,
@@ -43,6 +47,8 @@ import { PageBannerComponent } from './shared-components/page-banner/page-banner
     BrowserAnimationsModule,
     BrowserModule,
     BrowserAnimationsModule,
+    FormsModule, 
+    ReactiveFormsModule
   ],
   providers: [
     NavigationService,
@@ -50,6 +56,7 @@ import { PageBannerComponent } from './shared-components/page-banner/page-banner
     ReadRecipeService,
     UpdateRecipeService,
     DeleteRecipeService,
+    RecipeService,
   ],
   bootstrap: [FuzzyGuacamoleComponent]
 })

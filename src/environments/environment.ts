@@ -5,13 +5,13 @@
 export const environment = {
   production: true,
   firebaseConfig: {
-    apiKey: "AIzaSyBIdqws904sTe2qvmnfwn2uIBK01eznQCg",
+    apiKey: "AIzaSyC4dYa1V1sCOXYeJkHz9Os68O6ulXho2Bk",
     authDomain: "fuzzy-guacamole.firebaseapp.com",
     projectId: "fuzzy-guacamole",
     storageBucket: "fuzzy-guacamole.appspot.com",
-    messagingSenderId: "908116274350",
-    appId: "1:908116274350:web:1ed628e029b78a26e9113f",
-    measurementId: "G-WCZYXRYCE5"
+    messagingSenderId: "294426234983",
+    appId: "1:294426234983:web:06112fc0ae38d6173984c2",
+    measurementId: "G-J24RF9KRQL"
   }
 };
 
