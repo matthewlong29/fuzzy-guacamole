@@ -14,10 +14,15 @@ export class AddRecipeFormComponent implements OnInit {
   public recipe: Recipe;
 
   constructor(private createRecipeService: CreateRecipeService) {
-    this.recipe = new Recipe();
+
   }
 
   ngOnInit(): void {
+    this.recipe = new Recipe();
+    this.recipe.name = 'Chicken Noodle Soup';
+    this.recipe.description = 'Like the best chicken noodle soup or something';
+
+
     this.recipeNameForm = new FormGroup({
       nameControl: new FormControl('', [Validators.required, Validators.pattern("^[a-zA-Z]*$")]),
       descriptionControl: new FormControl('', [Validators.required, Validators.pattern("^[a-zA-Z]*$")]),
@@ -45,9 +50,9 @@ export class AddRecipeFormComponent implements OnInit {
     this.recipe.description = this.recipeIngredientsForm.get("descriptionControl").value;
   }
 
- /**
-  * publishRecipe: publishes the recipe to firebase.
-  */
+  /**
+   * publishRecipe: publishes the recipe to firebase.
+   */
   public publishRecipe() {
     this.createRecipeService.createRecipe(this.recipe);
   }

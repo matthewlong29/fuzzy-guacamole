@@ -2,15 +2,15 @@
 
 <main>
   <!-- the new recipe -->
-  <section *ngIf="recipe">
+  <section *ngIf="recipe" class="new-recipe">
     <h3 *ngIf="recipe.name">{{recipe.name}}</h3>
     <p *ngIf="recipe.description">{{recipe.description}}</p>
   </section>
 
 
-  <section class="recipe-inputs">
+  <section class="recipe-form">
     <!-- name and description form -->
-    <h3 class="form-section">Name and Description</h3>
+    <h3 class="form-section" *ngIf="!recipe.name || !recipe.description">Name and Description</h3>
     <form [formGroup]="recipeNameForm" (ngSubmit)="submitNameAndDescription()"
       *ngIf="!recipe.name || !recipe.description">
       <!-- name input -->
@@ -67,11 +67,11 @@
       <!-- add new ingredient -->
       <button mat-flat-button color="accent" (click)="submitNameAndDescription()">Add new ingredient</button>
     </form>
-
-    <section class="publish">
-      <button mat-flat-button color="accent">Share Recipe!</button>
-      <button mat-flat-button color="accent">Save As Draft</button>
-      <button mat-flat-button color="accent">Delete</button>
-    </section>
   </section>
 </main>
+
+<section class="publish-actions">
+  <button mat-flat-button color="accent">Share Recipe!</button>
+  <button mat-flat-button color="accent">Save As Draft</button>
+  <button mat-flat-button color="accent">Delete</button>
+</section>

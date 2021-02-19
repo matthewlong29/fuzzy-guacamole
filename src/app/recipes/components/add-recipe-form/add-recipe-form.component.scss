@@ -4,4 +4,31 @@ main {
   height: auto;
   margin: 0;
   padding: 2rem;
+  display: flex;
+}
+
+section {
+  &.new-recipe {
+    border: 8px solid $primary-color;
+    padding: 2rem;
+    flex-grow: 2;
+  }
+
+  &.recipe-form {
+    padding: 2rem;
+    flex-grow: 3;
+  }
+  &.publish-actions {
+    padding: 2rem;
+    button {
+      margin-right: 1rem;
+    }
+  }
+}
+
+
+h3.form-section {
+  padding: 1rem 0;
+  font-size: 1.25rem;
+  font-weight: bold;
 }
