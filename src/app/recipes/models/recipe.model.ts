@@ -2,7 +2,7 @@ export class Recipe {
   id: string;
   name: string;
   description: string;
-  creationDate: string;
+  creationDate: Date;
   numberOfIngredients: number;
   instructions: string;
   timeToPrep: number;

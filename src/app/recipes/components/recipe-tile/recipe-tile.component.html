@@ -8,10 +8,6 @@
     <input formControlName="descriptionControl" name="description">
   </div>
   <div>
-    <label for="creationDate">Creation Date:</label>
-    <input formControlName="creationDateControl" name="creationDate">
-  </div>
-  <div>
     <label for="numberOfIngredients">Number Of Ingredients:</label>
     <input formControlName="numberOfIngredientsControl" name="numberOfIngredients">
   </div>
@@ -36,31 +32,34 @@
     <input formControlName="numberOfCommentsControl" name="numberOfComments">
   </div>
 
-  <input type="submit" value="Submit">
+  <input type="submit" value="Submit" [disabled]="recipeForm.invalid">
 </form>
-
 
 <table>
   <thead>
     <th>id</th>
-    <th>recipeNumber</th>
+    <th>name</th>
+    <th>description</th>
     <th>creationDate</th>
-    <th>effectiveDate</th>
-    <th>expireDate</th>
-    <th>paymentOption</th>
-    <th>recipeAmount</th>
-    <th>extraInfo</th>
+    <th>numberOfIngredients</th>
+    <th>instructions</th>
+    <th>timeToPrep</th>
+    <th>timeToCook</th>
+    <th>numberOfLikes</th>
+    <th>numberOfComments</th>
   </thead>
   <tbody>
     <tr *ngFor="let recipe of recipes">
       <td>{{recipe.id}}</td>
-      <td>{{recipe.recipeNumber}}</td>
+      <td>{{recipe.name}}</td>
+      <td>{{recipe.description}}</td>
       <td>{{recipe.creationDate}}</td>
-      <td>{{recipe.effectiveDate}}</td>
-      <td>{{recipe.expireDate}}</td>
-      <td>{{recipe.paymentOption}}</td>
-      <td>{{recipe.recipeAmount}}</td>
-      <td>{{recipe.extraInfo}}</td>
+      <td>{{recipe.numberOfIngredients}}</td>
+      <td>{{recipe.instructions}}</td>
+      <td>{{recipe.timeToPrep}}</td>
+      <td>{{recipe.timeToCook}}</td>
+      <td>{{recipe.numberOfLikes}}</td>
+      <td>{{recipe.numberOfComments}}</td>
       <td>
         <button (click)="delete(recipe.id)">Delete</button>
       </td>

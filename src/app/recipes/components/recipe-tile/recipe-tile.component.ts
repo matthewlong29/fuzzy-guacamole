@@ -14,15 +14,14 @@ export class RecipeTileComponent implements OnInit {
 
   constructor(private recipeService: RecipeService) {
     this.recipeForm = new FormGroup({
-      nameControl: new FormControl('', Validators.required),
-      descriptionControl: new FormControl('', Validators.required),
-      creationDateControl: new FormControl('', Validators.required),
-      numberOfIngredientsControl: new FormControl('', Validators.required),
+      nameControl: new FormControl('', [Validators.required, Validators.pattern("^[a-zA-Z]*$")]),
+      descriptionControl: new FormControl('', [Validators.required, Validators.pattern("^[a-zA-Z]*$")]),
+      numberOfIngredientsControl: new FormControl('', [Validators.required, Validators.pattern("^[0-9]*$")]),
       instructionsControl: new FormControl('', Validators.required),
-      timeToPrepControl: new FormControl('', Validators.required),
-      timeToCookControl: new FormControl('', Validators.required),
-      numberOfLikesControl: new FormControl('', Validators.required),
-      numberOfCommentsControl: new FormControl('', Validators.required),
+      timeToPrepControl: new FormControl('', [Validators.required, Validators.pattern("^[0-9]*$")]),
+      timeToCookControl: new FormControl('', [Validators.required, Validators.pattern("^[0-9]*$")]),
+      numberOfLikesControl: new FormControl('', [Validators.required, Validators.pattern("^[0-9]*$")]),
+      numberOfCommentsControl: new FormControl('', [Validators.required, Validators.pattern("^[0-9]*$")]),
     });
   }
 
@@ -46,7 +45,7 @@ export class RecipeTileComponent implements OnInit {
     const recipe = new Recipe();
     recipe.name = this.recipeForm.get("nameControl").value;
     recipe.description = this.recipeForm.get("descriptionControl").value;
-    recipe.creationDate = this.recipeForm.get("creationDateControl").value;
+    recipe.creationDate = new Date(Date.now());
     recipe.numberOfIngredients = this.recipeForm.get("numberOfIngredientsControl").value;
     recipe.instructions = this.recipeForm.get("instructionsControl").value;
     recipe.timeToPrep = this.recipeForm.get("timeToPrepControl").value;
