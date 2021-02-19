@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Recipe } from '../../models/recipe.model';
-import { RecipeService } from '../../services/recipe.service';
+import { CreateRecipeService } from '../../services/create-recipe.service';
+import { DeleteRecipeService } from '../../services/delete-recipe.service';
+import { ReadRecipeService } from '../../services/read-recipe.service';
+import { UpdateRecipeService } from '../../services/update-recipe.service';
 
 @Component({
   selector: 'fuzzy-guacamole-recipe-tile',
@@ -12,7 +15,10 @@ export class RecipeTileComponent implements OnInit {
   public recipes: Array<Recipe>;
   public recipeForm: FormGroup;
 
-  constructor(private recipeService: RecipeService) {
+  constructor(private createRecipeService: CreateRecipeService, private readRecipeService: ReadRecipeService, private updateRecipeService: UpdateRecipeService, private deleteRecipeService: DeleteRecipeService) {
+  }
+
+  ngOnInit(): void {
     this.recipeForm = new FormGroup({
       nameControl: new FormControl('', [Validators.required, Validators.pattern("^[a-zA-Z]*$")]),
       descriptionControl: new FormControl('', [Validators.required, Validators.pattern("^[a-zA-Z]*$")]),
@@ -23,18 +29,14 @@ export class RecipeTileComponent implements OnInit {
       numberOfLikesControl: new FormControl('', [Validators.required, Validators.pattern("^[0-9]*$")]),
       numberOfCommentsControl: new FormControl('', [Validators.required, Validators.pattern("^[0-9]*$")]),
     });
-  }
 
-  ngOnInit(): void {
-    this.recipeService.getRecipes().subscribe(data => {
+    this.readRecipeService.getRecipes().subscribe(data => {
       this.recipes = data.map(e => {
         return {
           id: e.payload.doc.id,
           ...e.payload.doc.data() as {}
         } as Recipe;
       });
-
-      console.log(this.recipes);
     });
   }
 
@@ -52,21 +54,21 @@ export class RecipeTileComponent implements OnInit {
     recipe.timeToCook = this.recipeForm.get("timeToCookControl").value;
     recipe.numberOfLikes = this.recipeForm.get("numberOfLikesControl").value;
     recipe.numberOfComments = this.recipeForm.get("numberOfCommentsControl").value;
-    recipe.categories = ['chicken', 'chinese', ]
-    this.recipeService.createRecipe(recipe);
+    recipe.categories = ['chicken', 'chinese',];
+    this.createRecipeService.createRecipe(recipe);
   }
 
   /**
    * update: update an existing recipe.
    */
   public update(recipe: Recipe) {
-    this.recipeService.updateRecipe(recipe);
+    this.updateRecipeService.updateRecipe(recipe);
   }
 
   /**
    * delete: delete a recipe.
    */
   public delete(id: string) {
-    this.recipeService.deleteRecipe(id);
+    this.deleteRecipeService.deleteRecipe(id);
   }
 }

@@ -22,7 +22,6 @@ import { RecipeTileComponent } from './recipes/components/recipe-tile/recipe-til
 import { CreateRecipeService } from './recipes/services/create-recipe.service';
 import { DeleteRecipeService } from './recipes/services/delete-recipe.service';
 import { ReadRecipeService } from './recipes/services/read-recipe.service';
-import { RecipeService } from './recipes/services/recipe.service';
 import { UpdateRecipeService } from './recipes/services/update-recipe.service';
 import { PageBannerComponent } from './shared-components/page-banner/page-banner.component';
 
@@ -59,7 +58,6 @@ import { PageBannerComponent } from './shared-components/page-banner/page-banner
     ReadRecipeService,
     UpdateRecipeService,
     DeleteRecipeService,
-    RecipeService,
   ],
   bootstrap: [FuzzyGuacamoleComponent]
 })
