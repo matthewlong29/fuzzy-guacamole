@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Recipe } from '../../models/recipe.model';
+import { Ingredient, Recipe } from '../../models/recipe.model';
 import { CreateRecipeService } from '../../services/create-recipe.service';
 
 @Component({
@@ -24,13 +24,13 @@ export class AddRecipeFormComponent implements OnInit {
 
 
     this.recipeNameForm = new FormGroup({
-      nameControl: new FormControl('', [Validators.required, Validators.pattern("^[a-zA-Z]*$")]),
-      descriptionControl: new FormControl('', [Validators.required, Validators.pattern("^[a-zA-Z]*$")]),
+      nameControl: new FormControl(this.recipe.name, [Validators.required, Validators.pattern("^[a-zA-Z]*$")]),
+      descriptionControl: new FormControl(this.recipe.description, [Validators.required, Validators.pattern("^[a-zA-Z]*$")]),
     });
 
     this.recipeIngredientsForm = new FormGroup({
-      numberNeededControl: new FormControl('', [Validators.required, Validators.pattern("^[0-9]*$")]),
-      ingredientControl: new FormControl('', Validators.required),
+      numberNeededControl: new FormControl(1, [Validators.required, Validators.pattern("^[0-9]*$")]),
+      ingredientControl: new FormControl('chicken', Validators.required),
     });
   }
 
@@ -46,8 +46,12 @@ export class AddRecipeFormComponent implements OnInit {
    * addIngredient: adds a new ingredient to the recipe.
    */
   public addIngredient() {
-    this.recipe.name = this.recipeIngredientsForm.get("nameControl").value;
-    this.recipe.description = this.recipeIngredientsForm.get("descriptionControl").value;
+    const ingredient = new Ingredient();
+
+    ingredient.numberOfIngredient = this.recipeIngredientsForm.get("numberNeededControl").value;
+    ingredient.ingredientName = this.recipeIngredientsForm.get("ingredientControl").value;
+
+    this.recipe.ingredients.push(ingredient);
   }
 
   /**

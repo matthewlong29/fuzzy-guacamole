@@ -3,11 +3,21 @@ export class Recipe {
   name: string;
   description: string;
   categories: Array<string>;
+  ingredients: Array<Ingredient>;
   creationDate: Date;
-  numberOfIngredients: number;
   instructions: string;
   timeToPrep: number;
   timeToCook: number;
   numberOfLikes: number;
   numberOfComments: number;
+
+  constructor() {
+    this.categories = [];
+    this.ingredients = [];
+  }
+}
+
+export class Ingredient {
+  numberOfIngredient: number;
+  ingredientName: string;
 }

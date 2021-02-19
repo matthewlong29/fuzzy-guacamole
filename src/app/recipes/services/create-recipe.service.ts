@@ -9,7 +9,10 @@ export class CreateRecipeService {
 
   constructor(private firestore: AngularFirestore) { }
 
+  // TODO determine how to send nested custom objects
   public createRecipe(recipe: Recipe) {
-    return this.firestore.collection('recipes').add(Object.assign({}, recipe));
+    return this.firestore.collection('recipes').add(Object.assign({}, recipe, {
+      ingredients: Object.assign({}, recipe.ingredients)
+    }));
   }
 }
