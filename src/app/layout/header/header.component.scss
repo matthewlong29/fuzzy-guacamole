@@ -8,6 +8,7 @@ div {
   align-content: center;
   background-color: $primary-color;
   user-select: none;
+  border-bottom: 4px solid $accent-color;
 
   h1 {
     color: $text-color;

@@ -19,6 +19,8 @@ div {
 
       li {
         padding: 1rem 0;
+        border-top: 1px solid $primary-color;
+        border-bottom: 1px solid $primary-color;
         cursor: pointer;
         list-style: none;
         color: $text-color;
@@ -28,6 +30,8 @@ div {
 
         &:hover {
           background-color: lighten($color: $primary-color, $amount: 10);
+          border-top: 1px solid $text-color;
+          border-bottom: 1px solid $text-color;
         }
       }
     }
