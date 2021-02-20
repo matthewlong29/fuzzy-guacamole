@@ -15,7 +15,7 @@ section {
   }
 
   &.recipe-form {
-    padding: 2rem;
+    padding: 2rem 0 2rem 2rem;
     flex-grow: 3;
   }
   &.publish-actions {
@@ -26,9 +26,15 @@ section {
   }
 }
 
-
 h3.form-section {
   padding: 1rem 0;
   font-size: 1.25rem;
   font-weight: bold;
+}
+
+section.recipe-form {
+  form.recipe-name-form {
+    display: flex;
+    flex-direction: column;
+  }
 }

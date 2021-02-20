@@ -17,7 +17,7 @@
   <section class="recipe-form">
     <!-- name and description form -->
     <h3 class="form-section">Name and Description</h3>
-    <form [formGroup]="recipeNameForm" (ngSubmit)="submitNameAndDescription()">
+    <form [formGroup]="recipeNameForm" (ngSubmit)="submitNameAndDescription()" class="recipe-name-form">
       <!-- name input -->
       <mat-form-field appearance="outline" color="accent">
         <mat-label>Name</mat-label>
@@ -30,7 +30,7 @@
         <mat-label>Description</mat-label>
         <textarea matInput formControlName="descriptionControl" required></textarea>
       </mat-form-field>
-      <button mat-flat-button color="accent" (click)="submitNameAndDescription()">Save name and description</button>
+      <button mat-flat-button color="accent" (click)="submitNameAndDescription()">Save Name and Description</button>
     </form>
 
     <!-- ingredients -->
