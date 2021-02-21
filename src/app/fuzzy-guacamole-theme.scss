@@ -7,34 +7,34 @@
 light theme
 *********************************************************************************************************/
 
-$fuzzy-guacamole-primary: mat-palette($mat-light-green, A200, A100, A400);
-$fuzzy-guacamole-accent: mat-palette($mat-brown, 300, 400, 500);
-$fuzzy-guacamole-warn: mat-palette($mat-red, 400);
-$fuzzy-guacamole-text: mat-palette($mat-brown, 900);
-$fuzzy-guacamole-background: mat-palette($mat-light-green, 50);
-$fuzzy-guacamole-container: mat-palette($mat-deep-orange);
+$fuzzy-guacamole-light-primary: mat-palette($mat-light-green, A200, A100, A400);
+$fuzzy-guacamole-light-accent: mat-palette($mat-brown, 300, 400, 500);
+$fuzzy-guacamole-light-warn: mat-palette($mat-red, 400);
+$fuzzy-guacamole-light-text: mat-palette($mat-brown, 900);
+$fuzzy-guacamole-light-background: mat-palette($mat-light-green, 50);
+$fuzzy-guacamole-light-container: mat-palette($mat-deep-orange);
 
-$fuzzy-guacamole-theme: mat-light-theme(
+$fuzzy-guacamole-light-theme: mat-light-theme(
   (
     color: (
-      primary: $fuzzy-guacamole-primary,
-      accent: $fuzzy-guacamole-accent,
-      warn: $fuzzy-guacamole-warn,
-      text: $fuzzy-guacamole-text,
-      background: $fuzzy-guacamole-background,
-      container: $fuzzy-guacamole-container,
+      primary: $fuzzy-guacamole-light-primary,
+      accent: $fuzzy-guacamole-light-accent,
+      warn: $fuzzy-guacamole-light-warn,
+      text: $fuzzy-guacamole-light-text,
+      background: $fuzzy-guacamole-light-background,
+      container: $fuzzy-guacamole-light-container,
     ),
   )
 );
 
-@include angular-material-theme($fuzzy-guacamole-theme);
+@include angular-material-theme($fuzzy-guacamole-light-theme);
 
-$primary-color: mat-color($fuzzy-guacamole-primary);
-$accent-color: mat-color($fuzzy-guacamole-accent);
-$warn-color: mat-color($fuzzy-guacamole-warn);
-$text-color: mat-color($fuzzy-guacamole-text);
-$background-color: mat-color($fuzzy-guacamole-background);
-$container-color: mat-color($fuzzy-guacamole-container);
+$primary-color: mat-color($fuzzy-guacamole-light-primary);
+$accent-color: mat-color($fuzzy-guacamole-light-accent);
+$warn-color: mat-color($fuzzy-guacamole-light-warn);
+$text-color: mat-color($fuzzy-guacamole-light-text);
+$background-color: mat-color($fuzzy-guacamole-light-background);
+$container-color: mat-color($fuzzy-guacamole-light-container);
 
 /*********************************************************************************************************
 dark theme
@@ -72,9 +72,17 @@ $fuzzy-guacamole-dark-theme: mat-dark-theme(
 }
 
 /*********************************************************************************************************
-theme variables
+theme variables - spacing
 *********************************************************************************************************/
 
+// container
+$container-sm: 540px;
+$container-md: 720px;
+$container-lg: 960px;
+$container-xl: 1140px;
+$container-xxl: 1320px;
+
+// header (nav)
 $header-height: 150px;
 
 /*********************************************************************************************************
@@ -114,6 +122,10 @@ td {
 label {
   color: $text-color;
 }
+
+/*********************************************************************************************************
+scrollbar styles
+*********************************************************************************************************/
 
 ::-webkit-scrollbar {
   width: 10px;

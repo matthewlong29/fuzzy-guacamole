@@ -2,9 +2,9 @@
 
 section {
   display: flex;
+  background-color: $background-color;
 
   header {
-    min-width: $header-height;
     box-shadow: -4px 0px 4px 4px $text-color;
     margin-right: 4px;
   }
@@ -21,11 +21,11 @@ section {
       max-width: 75%;
 
       @media screen and (orientation: portrait) {
+        // TODO
       }
 
       @media screen and (orientation: landscape) {
-        // border-radius: 16px;
-        // margin-right: 5rem;
+        // TODO
       }
 
       aside {

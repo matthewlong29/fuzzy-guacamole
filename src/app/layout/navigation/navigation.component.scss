@@ -18,14 +18,15 @@ div {
       align-items: center;
 
       li {
-        padding: 1rem 0;
+        padding: 1rem 1rem 1rem 0;
         border-top: 1px solid $primary-color;
         border-bottom: 1px solid $primary-color;
         cursor: pointer;
         list-style: none;
         color: $text-color;
         width: 100%;
-        text-align: center;
+        text-align: right;
+        box-sizing: border-box;
         outline: none;
 
         &:hover {

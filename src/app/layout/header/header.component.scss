@@ -3,6 +3,7 @@
 div {
   height: calc(#{$header-height} / 2);
   padding: 1rem;
+  padding-left: 20vw;
   display: flex;
   justify-content: center;
   align-content: center;
