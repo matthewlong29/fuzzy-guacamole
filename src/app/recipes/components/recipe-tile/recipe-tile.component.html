@@ -1,31 +1,6 @@
-<table>
-  <thead>
-    <th>id</th>
-    <th>name</th>
-    <th>description</th>
-    <th>creationDate</th>
-    <th>numberOfIngredients</th>
-    <th>instructions</th>
-    <th>timeToPrep</th>
-    <th>timeToCook</th>
-    <th>numberOfLikes</th>
-    <th>numberOfComments</th>
-  </thead>
-  <tbody>
-    <tr *ngFor="let recipe of recipes">
-      <td>{{recipe.id}}</td>
-      <td>{{recipe.name}}</td>
-      <td>{{recipe.description}}</td>
-      <td>{{recipe.creationDate}}</td>
-      <td>{{recipe.numberOfIngredients}}</td>
-      <td>{{recipe.instructions}}</td>
-      <td>{{recipe.timeToPrep}}</td>
-      <td>{{recipe.timeToCook}}</td>
-      <td>{{recipe.numberOfLikes}}</td>
-      <td>{{recipe.numberOfComments}}</td>
-      <td>
-        <button (click)="delete(recipe.id)">Delete</button>
-      </td>
-    </tr>
-  </tbody>
-</table>
+<section>
+  <article class="recipe" *ngFor="let recipe of recipes">
+    <h1>{{recipe.name}}</h1>
+    <p>{{recipe.description}}</p>
+  </article>
+</section>

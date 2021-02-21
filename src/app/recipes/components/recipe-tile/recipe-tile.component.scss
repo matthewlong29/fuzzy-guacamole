@@ -1,0 +1,14 @@
+@import "../../../fuzzy-guacamole-theme.scss";
+
+section {
+  article {
+    border: 2px solid lighten($color: $primary-color, $amount: 25);
+    background-color: lighten($color: $accent-color, $amount: 35);
+    margin: 1rem;
+    padding: 1rem;
+    h1 {
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
+  }
+}
