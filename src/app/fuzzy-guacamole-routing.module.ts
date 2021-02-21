@@ -34,7 +34,7 @@ const routes: Routes = [
     component: DashboardComponent
   },
   {
-    path: 'add-new',
+    path: 'quick-add',
     component: AddRecipeFormComponent
   },
   {
