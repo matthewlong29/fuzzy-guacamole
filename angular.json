@@ -36,10 +36,7 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.json",
             "aot": true,
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/app/fuzzy-guacamole-theme.scss"
@@ -67,7 +64,8 @@
           },
           "configurations": {
             "production": {
-              "browserTarget": "fuzzy-guacamole:build:production"
+              "browserTarget": "fuzzy-guacamole:build:production",
+              "sourceMap": true
             }
           }
         },
@@ -80,12 +78,8 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "tsconfig.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "tsConfig": ["tsconfig.json"],
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
