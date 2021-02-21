@@ -14,8 +14,19 @@ main {
     align-items: center;
   }
 
-  section {
+  section.container {
     height: calc(100vh - 7rem);
     overflow-y: scroll;
+    display: flex;
+
+    section.recipes-container {
+      flex-grow: 1;
+    }
+
+    section.widgets-container {
+      position: fixed;
+      right: calc(1rem + 10px);
+      top: 8rem;
+    }
   }
 }
