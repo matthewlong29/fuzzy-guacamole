@@ -12,19 +12,21 @@ import { HeaderComponent } from './layout/header/header.component';
 import { NavigationComponent } from './layout/navigation/navigation.component';
 import { NavigationService } from './layout/navigation/services/navigation.service';
 import { MainComponent } from './main/main.component';
+import { PageBannerComponent } from './pages/components/page-banner/page-banner.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { ExploreComponent } from './pages/explore/explore.component';
 import { FavoritesComponent } from './pages/favorites/favorites.component';
 import { MessagesComponent } from './pages/messages/messages.component';
 import { NotificationsComponent } from './pages/notifications/notifications.component';
 import { ProfileComponent } from './pages/profile/profile.component';
+import { AddRecipeFormComponent } from './recipes/components/add-recipe-form/add-recipe-form.component';
 import { RecipeTileComponent } from './recipes/components/recipe-tile/recipe-tile.component';
 import { CreateRecipeService } from './recipes/services/create-recipe.service';
 import { DeleteRecipeService } from './recipes/services/delete-recipe.service';
 import { ReadRecipeService } from './recipes/services/read-recipe.service';
 import { UpdateRecipeService } from './recipes/services/update-recipe.service';
-import { PageBannerComponent } from './pages/components/page-banner/page-banner.component';
-import { AddRecipeFormComponent } from './recipes/components/add-recipe-form/add-recipe-form.component';
+import { FiltersComponent } from './recipes/widgets/filters/filters.component';
+import { StatsComponent } from './recipes/widgets/stats/stats.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,9 @@ import { AddRecipeFormComponent } from './recipes/components/add-recipe-form/add
     PageBannerComponent,
     DashboardComponent,
     RecipeTileComponent,
-    AddRecipeFormComponent
+    AddRecipeFormComponent,
+    StatsComponent,
+    FiltersComponent
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebaseConfig),
