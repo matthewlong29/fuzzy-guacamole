@@ -3,10 +3,10 @@
 div {
   height: calc(#{$header-height} / 2);
   padding: 1rem;
-  padding-left: 20vw;
+  width: 30vw;
   display: flex;
-  justify-content: center;
-  align-content: center;
+  justify-content: space-between;
+  align-items: center;
   background-color: $primary-color;
   user-select: none;
   border-bottom: 4px solid $accent-color;
@@ -14,6 +14,12 @@ div {
   h1 {
     color: $text-color;
     margin: 0;
-    text-align: center;
+    text-align: right;
+  }
+
+  .mat-icon {
+    font-size: 2.5rem;
+    height: 2.5rem;
+    width: 2.5rem;
   }
 }
