@@ -21,6 +21,7 @@ div {
         padding: 1rem;
         border-top: 1px solid $primary-color;
         border-bottom: 1px solid $primary-color;
+        
         cursor: pointer;
         list-style: none;
         color: $text-color;
@@ -30,8 +31,15 @@ div {
 
         div {
           display: flex;
-          justify-content: space-between;
           flex-direction: row;
+          justify-content: flex-end;
+
+          mat-icon {
+            margin-left: 1rem;
+            padding: 0 1rem;
+            border: 2px solid $text-color;
+            border-radius: 4px;
+          }
         }
 
         &:hover {
@@ -41,6 +49,11 @@ div {
 
           div {
             background-color: lighten($color: $primary-color, $amount: 10);
+
+            mat-icon {
+              color: lighten($color: $primary-color, $amount: 25);
+              background-color: lighten($color: $text-color, $amount: 25);
+            }
           }
         }
       }
