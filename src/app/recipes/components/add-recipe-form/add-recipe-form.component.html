@@ -1,63 +1,65 @@
 <fuzzy-guacamole-page-banner title="Add New"></fuzzy-guacamole-page-banner>
 
 <main>
-  <!-- the new recipe -->
-  <section class="new-recipe">
-    <h3>{{recipe.name}}</h3>
-    <p>{{recipe.description}}</p>
-    <ul>
-      <li *ngFor="let ingredient of recipe.ingredients">
-        {{ingredient.numberOfIngredient}}
-        {{ingredient.ingredientName}}
-      </li>
-    </ul>
-  </section>
+  <section class=main-section>
+    <!-- the new recipe -->
+    <section class="new-recipe">
+      <h3>{{recipe.name}}</h3>
+      <p>{{recipe.description}}</p>
+      <ul>
+        <li *ngFor="let ingredient of recipe.ingredients">
+          {{ingredient.numberOfIngredient}}
+          {{ingredient.ingredientName}}
+        </li>
+      </ul>
+    </section>
 
 
-  <section class="recipe-form">
-    <!-- name and description form -->
-    <h3 class="form-section">Name and Description</h3>
-    <form [formGroup]="recipeNameForm" (ngSubmit)="submitNameAndDescription()" class="recipe-name-form">
-      <!-- name input -->
-      <mat-form-field appearance="outline" color="accent">
-        <mat-label>Name</mat-label>
-        <input matInput formControlName="nameControl" required>
-        <mat-icon matSuffix>dinner_dining</mat-icon>
-      </mat-form-field>
-
-      <!-- description input -->
-      <mat-form-field appearance="outline" color="accent">
-        <mat-label>Description</mat-label>
-        <textarea matInput formControlName="descriptionControl" required></textarea>
-      </mat-form-field>
-      <button mat-flat-button color="accent" (click)="submitNameAndDescription()">Save Name and Description</button>
-    </form>
-
-    <!-- ingredients -->
-    <h3 class="form-section">Ingredients</h3>
-    <form [formGroup]="recipeIngredientsForm" (ngSubmit)="addIngredient()" class="recipe-ingredients-form">
-      <div>
+    <section class="recipe-form">
+      <!-- name and description form -->
+      <h3 class="form-section">Name and Description</h3>
+      <form [formGroup]="recipeNameForm" (ngSubmit)="submitNameAndDescription()" class="recipe-name-form">
         <!-- name input -->
-        <mat-form-field appearance="outline" color="accent" class="number">
-          <mat-label>Number</mat-label>
-          <input matInput formControlName="numberNeededControl" required number>
+        <mat-form-field appearance="outline" color="accent">
+          <mat-label>Name</mat-label>
+          <input matInput formControlName="nameControl" required>
+          <mat-icon matSuffix>dinner_dining</mat-icon>
         </mat-form-field>
 
         <!-- description input -->
-        <mat-form-field appearance="outline" color="accent" class="ingredient">
-          <mat-label>Ingredient</mat-label>
-          <textarea matInput formControlName="ingredientControl" required></textarea>
+        <mat-form-field appearance="outline" color="accent">
+          <mat-label>Description</mat-label>
+          <textarea matInput formControlName="descriptionControl" required></textarea>
         </mat-form-field>
-      </div>
+        <button mat-flat-button color="accent" (click)="submitNameAndDescription()">Save Name and Description</button>
+      </form>
 
-      <!-- add new ingredient -->
-      <button mat-flat-button color="accent" (click)="submitNameAndDescription()">Add new ingredient</button>
-    </form>
+      <!-- ingredients -->
+      <h3 class="form-section">Ingredients</h3>
+      <form [formGroup]="recipeIngredientsForm" (ngSubmit)="addIngredient()" class="recipe-ingredients-form">
+        <div>
+          <!-- name input -->
+          <mat-form-field appearance="outline" color="accent" class="number">
+            <mat-label>Number</mat-label>
+            <input matInput formControlName="numberNeededControl" required number>
+          </mat-form-field>
+
+          <!-- description input -->
+          <mat-form-field appearance="outline" color="accent" class="ingredient">
+            <mat-label>Ingredient</mat-label>
+            <textarea matInput formControlName="ingredientControl" required></textarea>
+          </mat-form-field>
+        </div>
+
+        <!-- add new ingredient -->
+        <button mat-flat-button color="accent" (click)="submitNameAndDescription()">Add new ingredient</button>
+      </form>
+    </section>
+  </section>
+
+  <section class="publish-actions">
+    <button mat-flat-button color="accent" (click)="publishRecipe()">Share Recipe!</button>
+    <button mat-flat-button color="accent">Save As Draft</button>
+    <button mat-flat-button color="accent">Delete</button>
   </section>
 </main>
-
-<section class="publish-actions">
-  <button mat-flat-button color="accent" (click)="publishRecipe()">Share Recipe!</button>
-  <button mat-flat-button color="accent">Save As Draft</button>
-  <button mat-flat-button color="accent">Delete</button>
-</section>
