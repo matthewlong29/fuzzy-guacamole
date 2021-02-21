@@ -21,6 +21,7 @@ aside {
       display: flex;
       align-items: center;
       font-weight: bold;
+      user-select: none;
     }
 
     div.widget-header-actions {
