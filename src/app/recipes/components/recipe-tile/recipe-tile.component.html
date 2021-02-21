@@ -2,5 +2,30 @@
   <article class="recipe" *ngFor="let recipe of recipes">
     <h1>{{recipe.name}}</h1>
     <p>{{recipe.description}}</p>
+    <p>{{recipe.creationDate}}</p>
+
+    <ul>
+      <li *ngFor="let category of recipe.categories | slice:0:5">{{category}}</li>
+    </ul>
+
+    <p>{{recipe.prepMinutes}}</p>
+    <p>{{recipe.cookMinutes}}</p>
+    <p>{{recipe.numberOfPeopleServed}}</p>
+    <p>{{recipe.numberOfComments}}</p>
+
+    <ul>
+      <li *ngFor="let instruction of recipe.instructions">
+        <span>{{instruction.stepNumber}}</span>
+        <div>{{instruction.step}}</div>
+      </li>
+    </ul>
+
+    <ul>
+      <li *ngFor="let ingredient of recipe.ingredients">
+        <span>{{ingredient.numberOfIngredient}}</span>
+        <div>{{ingredient.ingredientName}}</div>
+      </li>
+    </ul>
+
   </article>
 </section>

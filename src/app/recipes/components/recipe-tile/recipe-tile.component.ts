@@ -18,6 +18,8 @@ export class RecipeTileComponent implements OnInit {
   ngOnInit(): void {
     this.readRecipeService.getRecipes().subscribe(data => {
       this.recipes = data.map(e => {
+        console.log(e.payload.doc.data());
+
         return {
           id: e.payload.doc.id,
           ...e.payload.doc.data() as {}
