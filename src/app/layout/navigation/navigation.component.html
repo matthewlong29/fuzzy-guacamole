@@ -1,17 +1,47 @@
 <div>
   <nav>
     <ul>
-      <li matRipple (click)="close()" [routerLink]="'/'">Home Feed</li>
-      <li matRipple (click)="open()" [routerLink]="'/explore'">Explore</li>
-      <li matRipple (click)="open()" [routerLink]="'/favorites'">Favorites</li>
-      <li matRipple (click)="open()" [routerLink]="'/quick-add'">Quick Add</li>
+      <li matRipple (click)="close()" [routerLink]="'/'">
+        <div>
+          <mat-icon>home</mat-icon>
+          <span>Home Feed</span>
+        </div>
+      </li>
+      <li matRipple (click)="open()" [routerLink]="'/explore'">
+        <div>
+          <mat-icon>travel_explore</mat-icon>
+          <span>Explore</span>
+        </div>
+      </li>
+      <li matRipple (click)="open()" [routerLink]="'/favorites'">
+        <div>
+          <mat-icon>star</mat-icon>
+          <span>Favorites</span>
+        </div>
+      </li>
+      <li matRipple (click)="open()" [routerLink]="'/quick-add'">
+        <div>
+          <mat-icon>library_add</mat-icon>
+          <span>Quick Add</span>
+        </div>
+      </li>
     </ul>
   </nav>
 
   <nav>
     <ul>
-      <li matRipple (click)="open()" [routerLink]="'/notifications'">Notifications</li>
-      <li matRipple (click)="open()" [routerLink]="'/dashboard'">Dashboard</li>
+      <li matRipple (click)="open()" [routerLink]="'/notifications'">
+        <div>
+          <mat-icon>priority_high</mat-icon>
+          <span>Notifications</span>
+        </div>
+      </li>
+      <li matRipple (click)="open()" [routerLink]="'/dashboard'">
+        <div>
+          <mat-icon>dashboard</mat-icon>
+          <span>Dashboard</span>
+        </div>
+      </li>
     </ul>
   </nav>
 </div>

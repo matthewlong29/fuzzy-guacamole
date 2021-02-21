@@ -18,21 +18,30 @@ div {
       align-items: center;
 
       li {
-        padding: 1rem 1rem 1rem 0;
+        padding: 1rem;
         border-top: 1px solid $primary-color;
         border-bottom: 1px solid $primary-color;
         cursor: pointer;
         list-style: none;
         color: $text-color;
         width: 100%;
-        text-align: right;
         box-sizing: border-box;
         outline: none;
+
+        div {
+          display: flex;
+          justify-content: space-between;
+          flex-direction: row;
+        }
 
         &:hover {
           background-color: lighten($color: $primary-color, $amount: 10);
           border-top: 1px solid $text-color;
           border-bottom: 1px solid $text-color;
+
+          div {
+            background-color: lighten($color: $primary-color, $amount: 10);
+          }
         }
       }
     }
