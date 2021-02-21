@@ -37,4 +37,19 @@ section.recipe-form {
     display: flex;
     flex-direction: column;
   }
+  form.recipe-ingredients-form {
+    display: flex;
+    flex-direction: column;
+    div {
+      display: flex;
+      justify-content: center;
+      mat-form-field.number {
+        padding-right: 1rem;
+        max-width: 5rem;
+      }
+      mat-form-field.ingredient {
+        flex-grow: 1;
+      }
+    }
+  }
 }

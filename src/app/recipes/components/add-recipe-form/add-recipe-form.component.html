@@ -35,39 +35,20 @@
 
     <!-- ingredients -->
     <h3 class="form-section">Ingredients</h3>
-    <form [formGroup]="recipeIngredientsForm" (ngSubmit)="addIngredient()">
-      <!-- name input -->
-      <mat-form-field appearance="outline" color="accent">
-        <mat-label>Number</mat-label>
-        <input matInput formControlName="numberNeededControl" required number>
-        <mat-icon matSuffix>dinner_dining</mat-icon>
-      </mat-form-field>
+    <form [formGroup]="recipeIngredientsForm" (ngSubmit)="addIngredient()" class="recipe-ingredients-form">
+      <div>
+        <!-- name input -->
+        <mat-form-field appearance="outline" color="accent" class="number">
+          <mat-label>Number</mat-label>
+          <input matInput formControlName="numberNeededControl" required number>
+        </mat-form-field>
 
-      <!-- description input -->
-      <mat-form-field appearance="outline" color="accent">
-        <mat-label>Ingredient</mat-label>
-        <textarea matInput formControlName="ingredientControl" required></textarea>
-      </mat-form-field>
-
-      <!-- add new ingredient -->
-      <button mat-flat-button color="accent" (click)="submitNameAndDescription()">Add new ingredient</button>
-    </form>
-
-    <!-- recipe steps -->
-    <h3 class="form-section">Steps</h3>
-    <form [formGroup]="recipeIngredientsForm" (ngSubmit)="addIngredient()">
-      <!-- name input -->
-      <mat-form-field appearance="outline" color="accent">
-        <mat-label>Number</mat-label>
-        <input matInput formControlName="numberNeededControl" required number>
-        <mat-icon matSuffix>dinner_dining</mat-icon>
-      </mat-form-field>
-
-      <!-- description input -->
-      <mat-form-field appearance="outline" color="accent">
-        <mat-label>Ingredient</mat-label>
-        <textarea matInput formControlName="ingredientControl" required></textarea>
-      </mat-form-field>
+        <!-- description input -->
+        <mat-form-field appearance="outline" color="accent" class="ingredient">
+          <mat-label>Ingredient</mat-label>
+          <textarea matInput formControlName="ingredientControl" required></textarea>
+        </mat-form-field>
+      </div>
 
       <!-- add new ingredient -->
       <button mat-flat-button color="accent" (click)="submitNameAndDescription()">Add new ingredient</button>
