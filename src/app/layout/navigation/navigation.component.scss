@@ -34,10 +34,14 @@ div {
           flex-direction: row;
           justify-content: flex-end;
 
+          span {
+            display: flex;
+            align-items: center;
+          }
+
           mat-icon {
-            margin-left: 1rem;
+            margin-left: 0.5rem;
             padding: 0 1rem;
-            border: 2px solid $text-color;
             border-radius: 4px;
           }
         }
@@ -51,8 +55,7 @@ div {
             background-color: lighten($color: $primary-color, $amount: 10);
 
             mat-icon {
-              color: lighten($color: $primary-color, $amount: 25);
-              background-color: lighten($color: $text-color, $amount: 25);
+              color: lighten($color: $text-color, $amount: 10);
             }
           }
         }
