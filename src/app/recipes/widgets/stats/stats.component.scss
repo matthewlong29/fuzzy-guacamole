@@ -9,30 +9,6 @@ aside {
   z-index: 2;
   margin-bottom: 1rem;
 
-  section.widget-header {
-    width: 100%;
-    border-bottom: 1px solid darken($color: $accent-color, $amount: 10);
-    display: flex;
-    justify-content: space-between;
-
-    h3 {
-      margin: 0;
-      padding: 0.2rem;
-      display: flex;
-      align-items: center;
-      font-weight: bold;
-      user-select: none;
-    }
-
-    div.widget-header-actions {
-      button {
-        border: 1px solid darken($color: $primary-color, $amount: 5);
-        padding: 0.1rem;
-        margin: 0.1rem;
-      }
-    }
-  }
-
   section.widget-body {
     background-color: $background-color;
     border-radius: 4px;

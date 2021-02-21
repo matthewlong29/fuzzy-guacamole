@@ -27,6 +27,7 @@ import { ReadRecipeService } from './recipes/services/read-recipe.service';
 import { UpdateRecipeService } from './recipes/services/update-recipe.service';
 import { FiltersComponent } from './recipes/widgets/filters/filters.component';
 import { StatsComponent } from './recipes/widgets/stats/stats.component';
+import { WidgetHeaderComponent } from './recipes/widgets/components/widget-header/widget-header.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { StatsComponent } from './recipes/widgets/stats/stats.component';
     RecipeTileComponent,
     AddRecipeFormComponent,
     StatsComponent,
-    FiltersComponent
+    FiltersComponent,
+    WidgetHeaderComponent
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebaseConfig),
