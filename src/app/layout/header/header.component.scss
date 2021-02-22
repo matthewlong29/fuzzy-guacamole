@@ -27,3 +27,14 @@ div {
     width: 2.5rem;
   }
 }
+
+@media only screen and (max-width: 680px) {
+  div {
+    width: 64px;
+    justify-content: center;
+
+    h1 {
+      display: none;
+    }
+  }
+}

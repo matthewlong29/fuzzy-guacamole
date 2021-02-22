@@ -63,3 +63,25 @@ div {
     }
   }
 }
+
+@media only screen and (max-width: 680px) {
+  div {
+    nav {
+      ul {
+        li {
+          div {
+            justify-content: center;
+
+            span {
+              display: none;
+            }
+
+            mat-icon {
+              margin-left: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
