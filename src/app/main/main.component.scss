@@ -27,6 +27,10 @@ main {
       position: fixed;
       right: calc(1rem + 10px);
       top: 8rem;
+
+      @media only screen and (max-width: 680px) {
+        display: none;
+      }
     }
   }
 }
